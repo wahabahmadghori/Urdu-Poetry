@@ -103,7 +103,7 @@ class Poetry extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(left: 24.0, right: 24.0, top: 24, bottom: 100),
+        padding: EdgeInsets.only(left: 24.0, right: 24.0, top: 24, bottom: 120),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: poetryWidget(),
