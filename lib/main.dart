@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: const Text(
             'ستم سکھلائے گا رسم وفا ایسے نہیں ہوتا',
-            style: TextStyle(fontFamily: "Jameel", fontSize: 28),
+            style: TextStyle(fontFamily: "Jameel", fontSize: 20),
           ),
           centerTitle: true,
         ),
