@@ -74,9 +74,7 @@ List<Widget> poetryWidget() {
         ),
       ),
     );
-    list.add(Spacer(
-      flex: 1,
-    ));
+    list.add(SizedBox(height: 20));
   }
   return list;
 }
