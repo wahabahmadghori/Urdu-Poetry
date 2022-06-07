@@ -37,7 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           centerTitle: true,
         ),
-        body: Poetry());
+        body: Directionality(
+          textDirection: TextDirection.rtl,
+          child: Poetry(),
+        ));
   }
 }
 
@@ -77,7 +80,7 @@ List<Widget> poetryWidget() {
 
 List<Widget> getPeotryWords(List<String> words) {
   List<Widget> list = <Widget>[];
-  for (var i = 0; i < poetry.length; i++) {
+  for (var i = 0; i < words.length; i++) {
     list.add(
       Text(
         words[i],
