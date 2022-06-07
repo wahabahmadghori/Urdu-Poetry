@@ -51,6 +51,10 @@ List<String> poetry = [
   "مرے قاتل حساب خوں بہا ایسے نہیں ہوتا",
   "جہان دل میں کام آتی ہیں تدبیریں نہ تعزیریں",
   "یہاں پیمان تسلیم و رضا ایسے نہیں ہوتا",
+  "ہر اک شب ہر گھڑی گزرے قیامت یوں تو ہوتا ہے",
+  "مگر ہر صبح ہو روز جزا ایسے نہیں ہوتا",
+  "رواں ہے نبض دوراں گردشوں میں آسماں سارے",
+  "جو تم کہتے ہو سب کچھ ہو چکا ایسے نہیں ہوتا",
 ];
 
 List<Widget> poetryWidget() {
@@ -58,7 +62,7 @@ List<Widget> poetryWidget() {
   list.add(
     Text(
       'غز ل',
-      style: TextStyle(fontFamily: "Jameel", fontSize: 18, fontWeight: FontWeight.bold),
+      style: TextStyle(fontFamily: "Jameel", fontSize: 24, fontWeight: FontWeight.bold),
     ),
   );
   for (var i = 0; i < poetry.length; i++) {
@@ -82,7 +86,7 @@ List<Widget> getPeotryWords(List<String> words) {
         words[i],
         style: TextStyle(
           fontFamily: "Jameel",
-          fontSize: 18,
+          fontSize: 10,
         ),
       ),
     );
