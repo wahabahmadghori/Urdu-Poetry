@@ -26,11 +26,6 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-const htmlData = r"""
-<p></p><p></p><p></p><p></p><p></p><p></p><p></p><p</p><p></p><p></p>
-
-""";
-
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -38,9 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: const Text(
             'ستم سکھلائے گا رسم وفا ایسے نہیں ہوتا',
-            style: TextStyle(
-              fontFamily: "Jameel",
-            ),
+            style: TextStyle(fontFamily: "Jameel", fontSize: 28),
           ),
           centerTitle: true,
         ),
@@ -76,19 +69,6 @@ List<Widget> poetryWidget() {
   return list;
 }
 
-class Poetry extends StatelessWidget {
-  const Poetry({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: poetryWidget(),
-      ),
-    );
-  }
-}
-
 List<Widget> getPeotryWords(List<String> words) {
   List<Widget> list = <Widget>[];
   for (var i = 0; i < poetry.length; i++) {
@@ -103,4 +83,20 @@ List<Widget> getPeotryWords(List<String> words) {
     );
   }
   return list;
+}
+
+class Poetry extends StatelessWidget {
+  const Poetry({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: poetryWidget(),
+        ),
+      ),
+    );
+  }
 }
