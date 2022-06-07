@@ -59,10 +59,7 @@ List<Widget> poetryWidget() {
   list.add(
     Text(
       'غز ل',
-      style: TextStyle(
-        fontFamily: "Jameel",
-        fontSize: 18,
-      ),
+      style: TextStyle(fontFamily: "Jameel", fontSize: 18, fontWeight: FontWeight.bold),
     ),
   );
   for (var i = 0; i < poetry.length; i++) {
