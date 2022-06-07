@@ -30,17 +30,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'ستم سکھلائے گا رسم وفا ایسے نہیں ہوتا',
-            style: TextStyle(fontFamily: "Jameel", fontSize: 20),
-          ),
-          centerTitle: true,
+      appBar: AppBar(
+        title: const Text(
+          'ستم سکھلائے گا رسم وفا ایسے نہیں ہوتا',
+          style: TextStyle(fontFamily: "Jameel", fontSize: 20),
         ),
-        body: Directionality(
-          textDirection: TextDirection.rtl,
-          child: Poetry(),
-        ));
+        centerTitle: true,
+      ),
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Poetry(),
+      ),
+      bottomSheet: Container(height: 100, color: Theme.of(context).bottomAppBarColor),
+    );
   }
 }
 
@@ -74,7 +76,7 @@ List<Widget> poetryWidget() {
         ),
       ),
     );
-    list.add(SizedBox(height: 20));
+    list.add(SizedBox(height: 10));
   }
   return list;
 }
@@ -101,7 +103,7 @@ class Poetry extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.only(left: 24.0, right: 24.0, top: 24, bottom: 100),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: poetryWidget(),
