@@ -86,7 +86,7 @@ List<Widget> getPeotryWords(List<String> words) {
         words[i],
         style: TextStyle(
           fontFamily: "Jameel",
-          fontSize: 10,
+          fontSize: 20,
         ),
       ),
     );
