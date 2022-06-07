@@ -30,14 +30,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'ستم سکھلائے گا رسم وفا ایسے نہیں ہوتا',
-            style: TextStyle(fontFamily: "Jameel", fontSize: 28),
-          ),
-          centerTitle: true,
+      appBar: AppBar(
+        title: const Text(
+          'ستم سکھلائے گا رسم وفا ایسے نہیں ہوتا',
+          style: TextStyle(fontFamily: "Jameel", fontSize: 20),
         ),
-        body: Poetry());
+        centerTitle: true,
+      ),
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Poetry(),
+      ),
+      bottomSheet: Container(height: 100, color: Theme.of(context).bottomAppBarColor),
+    );
   }
 }
 
@@ -48,36 +53,43 @@ List<String> poetry = [
   "مرے قاتل حساب خوں بہا ایسے نہیں ہوتا",
   "جہان دل میں کام آتی ہیں تدبیریں نہ تعزیریں",
   "یہاں پیمان تسلیم و رضا ایسے نہیں ہوتا",
-  "ہر اک شب ہر گھڑی گزرے قیامت یوں تو ہوتا ہے"
-      "مگر ہر صبح ہو روز جزا ایسے نہیں ہوتا",
-  "رواں ہے نبض دوراں گردشوں میں آسماں سارے"
-      "جو تم کہتے ہو سب کچھ ہو چکا ایسے نہیں ہوتا"
+  "ہر اک شب ہر گھڑی گزرے قیامت یوں تو ہوتا ہے",
+  "مگر ہر صبح ہو روز جزا ایسے نہیں ہوتا",
+  "رواں ہے نبض دوراں گردشوں میں آسماں سارے",
+  "جو تم کہتے ہو سب کچھ ہو چکا ایسے نہیں ہوتا",
 ];
 
 List<Widget> poetryWidget() {
   List<Widget> list = <Widget>[];
+  list.add(
+    Text(
+      'غز ل',
+      style: TextStyle(fontFamily: "Jameel", fontSize: 24, fontWeight: FontWeight.bold),
+    ),
+  );
   for (var i = 0; i < poetry.length; i++) {
     list.add(
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: getPeotryWords(
           poetry[i].split(" "),
         ),
       ),
     );
+    list.add(SizedBox(height: 10));
   }
   return list;
 }
 
 List<Widget> getPeotryWords(List<String> words) {
   List<Widget> list = <Widget>[];
-  for (var i = 0; i < poetry.length; i++) {
+  for (var i = 0; i < words.length; i++) {
     list.add(
       Text(
         words[i],
         style: TextStyle(
           fontFamily: "Jameel",
-          fontSize: 24,
+          fontSize: 20,
         ),
       ),
     );
@@ -91,9 +103,9 @@ class Poetry extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.only(left: 24.0, right: 24.0, top: 24, bottom: 120),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: poetryWidget(),
         ),
       ),
