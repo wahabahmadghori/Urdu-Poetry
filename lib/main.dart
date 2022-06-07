@@ -56,6 +56,15 @@ List<String> poetry = [
 
 List<Widget> poetryWidget() {
   List<Widget> list = <Widget>[];
+  list.add(
+    Text(
+      'غز ل',
+      style: TextStyle(
+        fontFamily: "Jameel",
+        fontSize: 18,
+      ),
+    ),
+  );
   for (var i = 0; i < poetry.length; i++) {
     list.add(
       Row(
@@ -77,7 +86,7 @@ List<Widget> getPeotryWords(List<String> words) {
         words[i],
         style: TextStyle(
           fontFamily: "Jameel",
-          fontSize: 24,
+          fontSize: 18,
         ),
       ),
     );
@@ -91,7 +100,7 @@ class Poetry extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
