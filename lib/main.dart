@@ -68,7 +68,7 @@ List<Widget> poetryWidget() {
   for (var i = 0; i < poetry.length; i++) {
     list.add(
       Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: getPeotryWords(
           poetry[i].split(" "),
         ),
@@ -102,7 +102,6 @@ class Poetry extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: poetryWidget(),
         ),
